@@ -14,7 +14,7 @@ defaults:
     platform: gpu
     jit: True
     precision: float16
-    prealloc: True
+    prealloc: False # Set to false to share the GPU
     debug_nans: False
     logical_cpus: 0
     debug: False
@@ -30,7 +30,7 @@ defaults:
     save_every: 900
     eval_every: 1e6
     eval_initial: True
-    eval_eps: 1
+    eval_eps: 10
     eval_samples: 1
     train_ratio: 32.0
     train_fill: 0
