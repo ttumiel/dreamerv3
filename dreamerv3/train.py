@@ -140,7 +140,6 @@ def make_replay(
 
 
 def make_envs(config, **overrides):
-  suite, task = config.task.split('_', 1)
   ctors = []
   for index in range(config.envs.amount):
     ctor = lambda: make_env(config, **overrides)
@@ -169,6 +168,7 @@ def make_env(config, **overrides):
       'minecraft': 'embodied.envs.minecraft:Minecraft',
       'loconav': 'embodied.envs.loconav:LocoNav',
       'pinpad': 'embodied.envs.pinpad:PinPad',
+      'procgen': 'embodied.envs.procgen:Procgen',
   }[suite]
   if isinstance(ctor, str):
     module, cls = ctor.split(':')
