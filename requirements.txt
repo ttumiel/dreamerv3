@@ -9,3 +9,7 @@ rich
 ruamel.yaml
 tensorflow-cpu
 tensorflow_probability
+procgen
+moviepy
+matplotlib
+seaborn
